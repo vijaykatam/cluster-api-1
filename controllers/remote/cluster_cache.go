@@ -204,10 +204,10 @@ func (t *ClusterCacheTracker) newClusterAccessor(ctx context.Context, cluster cl
 	}
 
 	// Start cluster healthcheck!!!
-	go t.healthCheckCluster(cacheCtx, &healthCheckInput{
-		cluster: cluster,
-		cfg:     config,
-	})
+	//go t.healthCheckCluster(cacheCtx, &healthCheckInput{
+	//	cluster: cluster,
+	//	cfg:     config,
+	//})
 
 	delegatingClient, err := client.NewDelegatingClient(client.NewDelegatingClientInput{
 		CacheReader:     cache,
